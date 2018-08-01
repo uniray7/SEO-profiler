@@ -1,0 +1,19 @@
+{
+  "name": "seo-profiler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uniray7/SEO-profiler.git"
+  },
+  "author": "uniray7",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uniray7/SEO-profiler/issues"
+  },
+  "homepage": "https://github.com/uniray7/SEO-profiler#readme"
+}
