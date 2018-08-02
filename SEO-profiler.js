@@ -3,7 +3,7 @@ const Rule = require("./src/Rule.js");
 const Validator = require("./src/Validator.js");
 
 const rule1 = new Rule().tag("img").notHasAttr("alt").gt(0);
-const rule2 = new Rule().tag("a").hasAttr("rel").gt(0);
+const rule2 = new Rule().tag("a").notHasAttr("rel").gt(0);
 const rule3 = [
                 new Rule("head").tag("title").gt(0),
                 new Rule("head").tag("meta").hasAttr("name", "descriptions").gt(0),

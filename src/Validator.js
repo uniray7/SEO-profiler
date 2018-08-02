@@ -84,7 +84,7 @@ class Validator{
                         report += format("without ")
                     }
 
-                    report += format("%s attribute ", rule._attr.key);
+                    report += format("attribute %s ", rule._attr.key);
                     if(rule._attr.value) {
                         report += format("= %s ", rule._attr.value);
                     }
