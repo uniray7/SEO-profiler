@@ -1,8 +1,6 @@
 const asyncFetchHtml = require("./asyncFetchHtml.js");
 const asyncOutput = require("./asyncOutput.js");
 
-
-
 // TODO: scan(src, validator([rule1, rule2]), dest)
 /**
  * Scan a html with given rules
@@ -37,10 +35,6 @@ if (require.main === module) {
 
     const Rule = require("./Rule.js");
     const Validator = require("./Validator.js");
-
-
-
-
     const rule1 = new Rule().tag("img").notHasAttr("alt").gt(0);
 //    console.log(rule1)
 //    const rule2 = new Rule().tag("a").hasAttr("rel").gt(0);

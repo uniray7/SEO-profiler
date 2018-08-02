@@ -2,7 +2,7 @@ class Rule{
     constructor(scope) {
         this._scope = scope;
         this._tag = null;
-        this._attr = {key: null, value: null, exist:true};
+        this._attr = null;
         this._cond = null;
         this._thres = null;
 
@@ -14,6 +14,7 @@ class Rule{
     }
 
     notHasAttr(attr, value) {
+        this._attr = {};
         this._attr.key = attr
         if(value) {
             this._attr.value = value;
@@ -23,6 +24,7 @@ class Rule{
     }
 
     hasAttr(attr, value) {
+        this._attr = {};
         this._attr.key = attr
         if(value) {
             this._attr.value = value;

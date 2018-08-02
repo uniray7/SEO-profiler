@@ -57,7 +57,6 @@ class Validator{
             }
         });
         this._results = results;
-        console.log(this._results)
     } // scan()
 
     asyncGenReport() {
@@ -66,14 +65,14 @@ class Validator{
             let results = this._results;
             forEach(this._rules, function(rule, idx) {
                 report += "There is "
-                if(results[idx]) {
+                if(!results[idx]) {
                     report += "no "
                 }
 
                 if(rule._cond === "gt" && rule._thres>0) {
-                    report += format("more than $d ", rule._thres);
+                    report += format("more than %d ", rule._thres);
                 } else if(rule._cond === "lt" && rule._thres>0) {
-                    report += format("less than $d ", rule._thres);
+                    report += format("less than %d ", rule._thres);
                 }
 
                 report += format("<%s> tags ", rule._tag)
@@ -96,7 +95,7 @@ class Validator{
                 }
                 report += ".\n";
             }) //forEach
-        console.log(report)
+            resolve(report);
         }); //Promise
     } // asyncGenReport
 
