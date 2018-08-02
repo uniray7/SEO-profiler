@@ -35,6 +35,7 @@ function asyncOutput(content, dest) {
             })
         });
     } else {
+        console.log("Wrong output type")
         // TODO: error handling
     }
 }

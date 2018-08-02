@@ -34,7 +34,11 @@ function asyncFetchHtml(target) {
         });
 
         readStream.on("end", () => {
-            return resolve(resultBuf.toString());
+            if(resultBuf) {
+                return resolve(resultBuf.toString());
+            } else {
+                return resolve("");
+            }
         });
 
         readStream.on("error", (err) => {
